@@ -4,3 +4,7 @@ export interface Params {
   attributes: Record<string, string | number>;
   text?: string;
 }
+export interface genre {
+  name: string;
+  id: number;
+}
