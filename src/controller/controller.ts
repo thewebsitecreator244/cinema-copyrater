@@ -4,17 +4,16 @@ import { View } from "./../view/view";
 export class Controller {
   private model;
   private view;
-  genres;
 
   constructor() {
     this.model = new Model();
     this.view = new View();
-    this.genres = this.getGenres();
-    this.view.build(this.genres);
+    this.init();
   }
 
-  async getGenres() {
+  async init() {
     const data = await this.model.fetchData();
-    return data;
+    console.log(data);
+    this.view.build(data.genres);
   }
 }
