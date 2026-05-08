@@ -1,6 +1,11 @@
 import { Creator } from "../tools/creator";
 import type { genre } from "../types/types";
-import { headerParams } from "./headerparams";
+import {
+  genreButtonParams,
+  headerParams,
+  liParams,
+  ulParams,
+} from "./headerparams";
 
 export class HeaderView {
   header;
@@ -13,8 +18,16 @@ export class HeaderView {
     return header;
   }
   createMenu(genres: genre[]) {
+    const genreList = new Creator(ulParams).getTag();
     genres.forEach((movieGenre) => {
-      console.log(movieGenre);
+      genreButtonParams.text = movieGenre.name;
+      const item = new Creator(liParams).getTag();
+      const genreButton = new Creator(genreButtonParams).getTag();
+      if (this.header && genreList && item && genreButton) {
+        this.header.append(genreList);
+        genreList.append(item);
+        item.append(genreButton);
+      }
     });
   }
 }
