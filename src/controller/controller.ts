@@ -9,11 +9,16 @@ export class Controller {
     this.model = new Model();
     this.view = new View();
     this.init();
+    this.setListeners();
   }
 
   async init() {
     const data = await this.model.fetchData();
-    console.log(data);
     this.view.build(data.genres);
+  }
+  setListeners() {
+    this.view.header.headerElem?.addEventListener("click", (event) => {
+      console.log(event);
+    });
   }
 }

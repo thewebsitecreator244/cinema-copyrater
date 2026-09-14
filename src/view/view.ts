@@ -1,15 +1,15 @@
-import type { genre } from "../types/types";
 import { HeaderView } from "./headerview";
 
 export class View {
-  headerElem;
+  header;
   app;
   constructor() {
-    this.headerElem = new HeaderView();
     this.app = document.querySelector("#app");
-    this.app?.append(this.headerElem.header);
+    this.header = new HeaderView();
+    this.app?.append(this.header.headerElem);
+    console.log(this.header);
   }
-  build(genres: genre[]) {
-    this.headerElem.createMenu(genres);
-  }
+  //build() {
+  //this.header.createMenu();
+  //}
 }

@@ -1,3 +1,5 @@
+import listGenres from "../css/listGenres.module.css";
+
 export const headerParams = {
   tagName: "header",
   classList: ["header"],
@@ -6,7 +8,7 @@ export const headerParams = {
 };
 export const ulParams = {
   tagName: "ul",
-  classList: ["genre_list"],
+  classList: [listGenres.genreList],
   attributes: {},
   text: "",
 };
@@ -19,7 +21,9 @@ export const liParams = {
 
 export const genreButtonParams = {
   tagName: "button",
-  classList: ["genre_button"],
-  attributes: {},
+  classList: [listGenres.genreButton],
+  attributes: {
+    "data-name": "",
+  },
   text: "",
 };
