@@ -1,15 +1,17 @@
 import { HeaderView } from "./headerview";
+import type { genre } from "../types/types";
 
 export class View {
-  header;
-  app;
+  app: HTMLElement | null;
+  header: HeaderView | null = null;
+
   constructor() {
     this.app = document.querySelector("#app");
-    this.header = new HeaderView();
-    this.app?.append(this.header.headerElem);
-    console.log(this.header);
   }
-  //build() {
-  //this.header.createMenu();
-  //}
+
+  build(genres: genre[]): void {
+    this.header = new HeaderView(genres);
+
+    this.app?.append(this.header.headerElem);
+  }
 }
