@@ -1,7 +1,7 @@
 import type { Params } from "../types/types";
 
 export class Creator {
-  element: HTMLElement | undefined;
+  element: HTMLElement;
 
   constructor(params: Params) {
     this.element = this.createElement(params);
@@ -10,42 +10,37 @@ export class Creator {
     this.setText(params);
   }
 
-  createElement(params: Params): HTMLElement | undefined {
-    if (params.tagName) {
-      const currentElement: HTMLElement = document.createElement(
-        params.tagName,
-      );
-
-      return currentElement;
+  private createElement(params: Params): HTMLElement {
+    if (!params.tagName) {
+      throw new Error("tagName is required");
     }
 
-    return undefined;
+    return document.createElement(params.tagName);
   }
 
-  setClassList(params: Params): void {
-    if (this.element && params.classList && params.classList.length > 0) {
+  private setClassList(params: Params): void {
+    if (params.classList?.length) {
       this.element.classList.add(...params.classList);
     }
   }
 
-  setAttributesToElement(params: Params): void {
-    if (this.element && params.attributes) {
+  private setAttributesToElement(params: Params): void {
+    if (params.attributes) {
       for (const attribute in params.attributes) {
-        const attributeKey: string | number = attribute;
-        const attributeValue: string | number = params.attributes[attribute];
+        const attributeValue = params.attributes[attribute];
 
-        this.element.setAttribute(attributeKey, String(attributeValue));
+        this.element.setAttribute(attribute, String(attributeValue));
       }
     }
   }
 
-  setText(params: Params): void {
-    if (this.element && params.text) {
+  private setText(params: Params): void {
+    if (params.text) {
       this.element.textContent = params.text;
     }
   }
 
-  getTag(): HTMLElement | undefined {
+  getTag(): HTMLElement {
     return this.element;
   }
 }
