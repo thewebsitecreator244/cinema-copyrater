@@ -1,5 +1,5 @@
 import { Creator } from "../tools/creator";
-import { movielistParams } from "./moviesparams";
+import { cardParams, movielistParams } from "./moviesparams";
 
 export class Movies {
   listElement;
@@ -11,6 +11,8 @@ export class Movies {
   createListCards() {
     this.dataArray.forEach((film) => {
       console.log(film);
+      const filmCard = new Creator(cardParams).getTag();
+      this.listElement.append(filmCard);
     });
   }
 }
