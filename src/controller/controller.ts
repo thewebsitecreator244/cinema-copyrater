@@ -31,7 +31,7 @@ export class Controller {
         const isButton = isElement.closest("[data-name]");
         if (isButton) {
           const isGenreId = isButton.getAttribute("data-id");
-          this.model.fetchMovies(isGenreId);
+          await this.model.fetchMovies(isGenreId);
           await this.view.renderMovies(this.model.currentMovies);
         }
       }

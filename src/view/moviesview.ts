@@ -5,7 +5,7 @@ export class Movies {
   listElement;
   dataArray;
   constructor(movies) {
-    this.dataArray = movies;
+    this.dataArray = movies.results;
     this.listElement = new Creator(movielistParams).getTag();
   }
   createListCards() {

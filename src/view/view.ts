@@ -20,6 +20,6 @@ export class View {
     this.movieList = new Movies(movies);
     console.log(this.movieList);
 
-    //this.movieList.createListCards()
+    this.movieList.createListCards();
   }
 }
