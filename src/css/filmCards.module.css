@@ -1,6 +1,23 @@
-.listMovies{
-
+.listMovies {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.filmCard{
-    
+.filmCard {
+    width: 200px;
+    height: 300px;
+    background-color: rgb(2, 2, 2);
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 25.67px;
+}
+.img{
+    width: 100%;
+    transition: 0.567s;
+}
+
+.filmCard:hover .img{
+    transform: scale(1.1);
 }

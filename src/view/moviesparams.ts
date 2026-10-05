@@ -11,3 +11,8 @@ export const cardParams = {
   attributes: {},
   text: "",
 };
+export const movieImgParams = {
+  tagName: "img",
+  classList: [filmCards.img],
+  attributes: { src: "" },
+};
