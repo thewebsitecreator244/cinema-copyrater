@@ -12,12 +12,31 @@
     object-fit: cover;
     overflow: hidden;
     border-radius: 25.67px;
+    position: relative;
+
 }
-.img{
+.img {
     width: 100%;
     transition: 0.567s;
 }
 
-.filmCard:hover .img{
+.filmCard:hover .img {
     transform: scale(1.1);
+}
+.title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: black;
+    background-color: aliceblue;
+    width: 100%;
+    font-size: medium;
+    justify-self: center;
+    padding: 12px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    min-height: 67px;
+
+
 }

@@ -1,3 +1,3 @@
 import { Controller } from "./controller/controller";
-//import style from "./css/listGenres.module.css"
+import "./main.css";
 new Controller();

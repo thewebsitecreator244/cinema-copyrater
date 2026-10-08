@@ -1,5 +1,10 @@
 import { Creator } from "../tools/creator";
-import { cardParams, movieImgParams, movielistParams } from "./moviesparams";
+import {
+  cardParams,
+  movieImgParams,
+  movielistParams,
+  movieTitleParams,
+} from "./moviesparams";
 
 export class Movies {
   listElement;
@@ -12,10 +17,13 @@ export class Movies {
     this.dataArray.forEach((film) => {
       console.log(film);
       movieImgParams.attributes.src = `https://image.tmdb.org/t/p/w500/${film.poster_path}`;
+      movieTitleParams.text = film.title;
       const img = new Creator(movieImgParams).getTag();
+      const title = new Creator(movieTitleParams).getTag();
       const filmCard = new Creator(cardParams).getTag();
       this.listElement.append(filmCard);
       filmCard.append(img);
+      filmCard.append(title);
     });
   }
 }
