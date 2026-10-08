@@ -4,6 +4,7 @@ import {
   movieImgParams,
   movielistParams,
   movieTitleParams,
+  movieTitleWrapperParams,
 } from "./moviesparams";
 
 export class Movies {
@@ -21,9 +22,11 @@ export class Movies {
       const img = new Creator(movieImgParams).getTag();
       const title = new Creator(movieTitleParams).getTag();
       const filmCard = new Creator(cardParams).getTag();
+      const wrapper = new Creator(movieTitleWrapperParams).getTag();
+      wrapper.append(title);
       this.listElement.append(filmCard);
       filmCard.append(img);
-      filmCard.append(title);
+      filmCard.append(wrapper);
     });
   }
 }

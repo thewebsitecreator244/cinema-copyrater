@@ -23,3 +23,10 @@ export const movieTitleParams = {
   attributes: {},
   text: "",
 };
+
+export const movieTitleWrapperParams = {
+  tagName: "div",
+  classList: [filmCards.wrapper],
+  attributes: {},
+  text: "",
+};
