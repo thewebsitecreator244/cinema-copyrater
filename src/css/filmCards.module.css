@@ -42,12 +42,15 @@
   padding: 12px;
   min-height: 50px;
 }
-.rating_wrapper{
-
+.rating_wrapper {
 }
-.rating_star{
-
+.rating_star {
+  background-image: url("/star.svg");
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.rating_text{
-  
+.rating_text {
 }

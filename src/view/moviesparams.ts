@@ -35,9 +35,9 @@ export const ratingWrapperParams = {
   attributes: {},
 };
 export const ratingStarParams = {
-  tagName: "img",
+  tagName: "div",
   classList: [filmCards.rating_star],
-  attributes: { src: "/star.svg" },
+  attributes: {},
 };
 
 export const ratingTextParams = {

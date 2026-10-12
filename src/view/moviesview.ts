@@ -34,7 +34,7 @@ export class Movies {
       filmCard.append(img);
       filmCard.append(wrapper);
       wrapper.append(ratingWrapper);
-      wrapper.append(ratingText, ratingStar);
+      ratingWrapper.append(ratingText, ratingStar);
     });
   }
 }
