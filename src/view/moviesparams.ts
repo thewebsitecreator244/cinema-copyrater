@@ -16,6 +16,11 @@ export const movieImgParams = {
   classList: [filmCards.img],
   attributes: { src: "" },
 };
+export const moviePosterParams = {
+  tagName: "img",
+  classList: [filmCards.poster],
+  attributes: { src: "" },
+};
 
 export const movieTitleParams = {
   tagName: "h2",

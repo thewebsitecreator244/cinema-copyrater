@@ -3,6 +3,7 @@ import {
   cardParams,
   movieImgParams,
   movielistParams,
+  moviePosterParams,
   movieTitleParams,
   movieTitleWrapperParams,
   ratingStarParams,
@@ -21,8 +22,15 @@ export class Movies {
     this.dataArray.forEach((film) => {
       console.log(film);
       movieImgParams.attributes.src = `https://image.tmdb.org/t/p/w500/${film.poster_path}`;
+      moviePosterParams.attributes.src = `https://image.tmdb.org/t/p/w500/${film.poster_path}`;
       movieTitleParams.text = film.title;
+      if (film.vote_average != 0) {
+        ratingTextParams.text = film.vote_average;
+      } else {
+        ratingTextParams.text = "no rating yet";
+      }
       const img = new Creator(movieImgParams).getTag();
+      const poster = new Creator(moviePosterParams).getTag();
       const title = new Creator(movieTitleParams).getTag();
       const filmCard = new Creator(cardParams).getTag();
       const wrapper = new Creator(movieTitleWrapperParams).getTag();
@@ -31,7 +39,7 @@ export class Movies {
       const ratingText = new Creator(ratingTextParams).getTag();
       wrapper.append(title);
       this.listElement.append(filmCard);
-      filmCard.append(img);
+      filmCard.append(img, poster);
       filmCard.append(wrapper);
       wrapper.append(ratingWrapper);
       ratingWrapper.append(ratingText, ratingStar);
