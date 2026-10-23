@@ -24,6 +24,7 @@ export class Movies {
       movieImgParams.attributes.src = `https://image.tmdb.org/t/p/w500/${film.poster_path}`;
       moviePosterParams.attributes.src = `https://image.tmdb.org/t/p/w500/${film.poster_path}`;
       movieTitleParams.text = film.title;
+      cardParams.attributes["data-card-id"] = film.id;
       if (film.vote_average != 0) {
         ratingTextParams.text = film.vote_average;
       } else {

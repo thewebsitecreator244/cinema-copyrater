@@ -30,7 +30,7 @@ export class Model {
 
     //return data;
   }
-
+  //dom na almaznoy 33
   async fetchMovies(movieId: number) {
     const options = {
       method: "GET",
@@ -54,5 +54,22 @@ export class Model {
 
     this.currentMovies = data;
     console.log(this.currentMovies);
+  }
+  async getFilmInfoById(id) {
+    const movieUrl = `https://api.themoviedb.org/3/movie/${id}?language=en-US`;
+
+    const options = {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        Authorization: `Bearer ${import.meta.env.VITE_TMDB_TOKEN}`,
+      },
+    };
+
+    const response = await fetch(movieUrl, options);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    console.log(await response.json());
   }
 }

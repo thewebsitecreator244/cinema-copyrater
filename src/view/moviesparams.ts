@@ -8,7 +8,7 @@ export const movielistParams = {
 export const cardParams = {
   tagName: "li",
   classList: [filmCards.filmCard],
-  attributes: {},
+  attributes: { "data-card-id": "" },
   text: "",
 };
 export const movieImgParams = {
