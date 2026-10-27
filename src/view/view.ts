@@ -1,14 +1,17 @@
 import { HeaderView } from "./headerview";
 import type { genre } from "../types/types";
 import { Movies } from "./moviesview";
+import { MainView } from "./mainview";
 
 export class View {
   app: HTMLElement | null;
   header: HeaderView | null = null;
   movieList;
+  main;
 
   constructor() {
     this.app = document.querySelector("#app");
+    this.main = new MainView();
   }
 
   build(genres: genre[]): void {

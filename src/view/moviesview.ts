@@ -46,4 +46,7 @@ export class Movies {
       ratingWrapper.append(ratingText, ratingStar);
     });
   }
+  removeElem() {
+    this.listElement.remove();
+  }
 }

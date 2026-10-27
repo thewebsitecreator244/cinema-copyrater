@@ -40,6 +40,7 @@ export class Controller {
         if (isCard) {
           console.log();
           await this.model.getFilmInfoById(isCard.getAttribute("data-card-id"));
+          this.view.movieList.removeElem();
         }
       }
     });
