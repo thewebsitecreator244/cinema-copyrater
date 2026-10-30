@@ -1,6 +1,6 @@
 import { HeaderView } from "./headerview";
 import type { genre } from "../types/types";
-import { Movies } from "./moviesview";
+//import { Movies } from "./moviesview";
 import { MainView } from "./mainview";
 
 export class View {
@@ -11,17 +11,19 @@ export class View {
 
   constructor() {
     this.app = document.querySelector("#app");
-    this.main = new MainView();
   }
 
   build(genres: genre[]): void {
     this.header = new HeaderView(genres);
+    this.main = new MainView();
 
-    this.app?.append(this.header.headerElem);
+    this.app?.append(this.header.headerElem, this.main.mainElem);
   }
   async renderMovies(movies) {
-    this.movieList = new Movies(movies);
-    this.movieList.createListCards();
-    this.app?.append(this.movieList.listElement);
+    console.log(this.main.listObj.createListCards(movies));
+
+    //this.movieList = new Movies();
+    //this.movieList.createListCards();
+    //this.app?.append(this.movieList.listElement);
   }
 }

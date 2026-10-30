@@ -13,13 +13,14 @@ import {
 
 export class Movies {
   listElement;
-  dataArray;
-  constructor(movies) {
-    this.dataArray = movies.results;
+
+  constructor() {
+    //this.dataArray = movies.results;
     this.listElement = new Creator(movielistParams).getTag();
   }
-  createListCards() {
-    this.dataArray.forEach((film) => {
+  createListCards(dataArray) {
+    this.clearList();
+    dataArray.results.forEach((film) => {
       console.log(film);
       movieImgParams.attributes.src = `https://image.tmdb.org/t/p/w500/${film.poster_path}`;
       moviePosterParams.attributes.src = `https://image.tmdb.org/t/p/w500/${film.poster_path}`;
@@ -48,5 +49,8 @@ export class Movies {
   }
   removeElem() {
     this.listElement.remove();
+  }
+  clearList() {
+    this.listElement.innerHTML = "";
   }
 }

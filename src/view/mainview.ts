@@ -1,10 +1,13 @@
 import { Creator } from "../tools/creator";
 import { mainParams } from "./mainparams";
+import { Movies } from "./moviesview";
 
 export class MainView {
-  main;
+  mainElem;
+  listObj;
 
   constructor() {
-    this.main = new Creator(mainParams).getTag();
+    this.mainElem = new Creator(mainParams).getTag();
+    this.listObj = new Movies();
   }
 }
