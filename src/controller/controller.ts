@@ -39,8 +39,11 @@ export class Controller {
 
         if (isCard) {
           console.log();
-          await this.model.getFilmInfoById(isCard.getAttribute("data-card-id"));
-          this.view.movieList.removeElem();
+          const info = await this.model.getFilmInfoById(
+            isCard.getAttribute("data-card-id"),
+          );
+          this.view.main.listObj.removeElem();
+          this.view.main.createFilm(info);
         }
       }
     });

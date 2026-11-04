@@ -6,7 +6,6 @@ import { MainView } from "./mainview";
 export class View {
   app: HTMLElement | null;
   header: HeaderView | null = null;
-  movieList;
   main;
 
   constructor() {
