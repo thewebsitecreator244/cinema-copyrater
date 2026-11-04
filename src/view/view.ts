@@ -20,10 +20,7 @@ export class View {
     this.app?.append(this.header.headerElem, this.main.mainElem);
   }
   async renderMovies(movies) {
-    console.log(this.main.listObj.createListCards(movies));
-
-    //this.movieList = new Movies();
-    //this.movieList.createListCards();
-    //this.app?.append(this.movieList.listElement);
+    this.main.listObj.createListCards(movies);
+    this.app?.append(this.main.listObj.listElement);
   }
 }
