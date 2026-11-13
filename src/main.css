@@ -22,6 +22,7 @@ html {
 
 body {
   margin: 0;
+  background-color: #080808;
 }
 
 /**
@@ -147,6 +148,8 @@ sup {
 
 img {
   border-style: none;
+  object-fit: cover;
+  width: 100%;
 }
 
 /* Forms

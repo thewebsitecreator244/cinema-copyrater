@@ -13,8 +13,9 @@ export class MainView {
     this.listObj = new Movies();
     this.filmObj = null;
   }
-  createFilm(params) {
+  async createFilm(params) {
     this.filmObj = new FilmView(params);
     this.mainElem.append(this.filmObj.filmCard);
+    console.log("every day is a 67");
   }
 }

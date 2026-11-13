@@ -21,7 +21,6 @@ export class Movies {
   createListCards(dataArray) {
     this.clearList();
     dataArray.results.forEach((film) => {
-      console.log(film);
       movieImgParams.attributes.src = `https://image.tmdb.org/t/p/w500/${film.poster_path}`;
       moviePosterParams.attributes.src = `https://image.tmdb.org/t/p/w500/${film.poster_path}`;
       movieTitleParams.text = film.title;

@@ -50,10 +50,8 @@ export class Model {
     }
 
     const data = await response.json();
-    //console.log(data);
 
     this.currentMovies = data;
-    console.log(this.currentMovies);
   }
   async getFilmInfoById(id) {
     const movieUrl = `https://api.themoviedb.org/3/movie/${id}?language=en-US`;
@@ -70,6 +68,6 @@ export class Model {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    console.log(await response.json());
+    return await response.json();
   }
 }

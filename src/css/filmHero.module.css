@@ -1,0 +1,11 @@
+.hero{
+    background-color: #141414;
+    height: 100vh;
+    position: relative;
+}
+.bigImg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}

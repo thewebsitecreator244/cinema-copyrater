@@ -43,7 +43,7 @@ export class Controller {
             isCard.getAttribute("data-card-id"),
           );
           this.view.main.listObj.removeElem();
-          this.view.main.createFilm(info);
+          await this.view.main.createFilm(info);
         }
       }
     });
