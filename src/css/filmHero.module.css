@@ -1,11 +1,49 @@
-.hero{
-    background-color: #141414;
-    height: 100vh;
-    position: relative;
+.hero {
+  background-color: #141414;
+  height: 100vh;
+  position: relative;
 }
-.bigImg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    
+.bigImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.filmName{
+  color: #ffffff;
+}
+.filmWrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.rating_wrapper {
+  display: flex;
+  gap: 5px;
+}
+.rating_star {
+  background-image: url("/star.svg");
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.rating_text {
+  font-size: medium;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+    color: #ffffff;
+}
+.overview{
+  font-size: medium;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: #ffffff;
+}
+.info{
+  display: flex;
 }
