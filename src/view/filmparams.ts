@@ -54,3 +54,33 @@ export const filmInfoWrapperParams = {
   attributes: {},
   text: "",
 };
+export const yearParams = {
+  tagName: "p",
+  classList: [Hero.year],
+  attributes: {},
+  text: "",
+};
+export const runtimeParams = {
+  tagName: "p",
+  classList: [Hero.runtime],
+  attributes: {},
+  text: "",
+};
+export const genresListParams = {
+  tagName: "ul",
+  classList: [Hero.list],
+  attributes: {},
+  text: "",
+};
+export const genresLiParams = {
+  tagName: "li",
+  classList: [Hero.li],
+  attributes: {},
+  text: "",
+};
+export const filmAParams = {
+  tagName: "a",
+  classList: [Hero.filmA],
+  attributes: { href: "" },
+  text: "▶view details",
+};

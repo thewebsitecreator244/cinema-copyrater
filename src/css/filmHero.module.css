@@ -9,10 +9,10 @@
   left: 0;
   z-index: 1;
 }
-.filmName{
+.filmName {
   color: #ffffff;
 }
-.filmWrapper{
+.filmWrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -32,18 +32,39 @@
 }
 .rating_text {
   font-size: medium;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-    color: #ffffff;
+
 }
-.overview{
+.overview {
   font-size: medium;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 100;
   font-style: normal;
   color: #ffffff;
 }
-.info{
+.info {
   display: flex;
+  gap:5px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: #ffffff;
+}
+.year{
+    color: #ffffff;
+}
+.runtime{
+  color: #ffffff;
+}
+.list{
+  display: flex;
+  gap:5px;
+  list-style: none;
+}
+.li{
+  color: #ffffff;
+}
+.filmA{
+  z-index: 2;
+  position: absolute;
+  
 }
